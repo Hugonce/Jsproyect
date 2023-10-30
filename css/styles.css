@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #3A4741, #8DA0A4);
+}
+
+.navbar-brand img {
+    width: 70px;
+    height: 80px;
+}
+
+.nav-item a {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.img-tarj {
+    width: 250px; 
+    height: 350px;
+}
+form div {
+    display: flex;
+}
+
+form div p {
+    display: flex;
+    width: 250px;
+}
+
+form div input {
+    margin: 0 20px 20px 10px;
+    width: 100px;
+}
+
+form button {
+    margin: 0 20px 20px 10px;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-image: linear-gradient(to right, #3A4741, #8DA0A4);
+}
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer section a img {
+    width: 70px;
+    height: 80px;
+}
+
+footer section .redes p {
+    font-weight: 500;
+    font-size: 20px;
+    color: burlywood;
+    padding: 5px 0 0 10px;
+}
+
+footer section .redes a img {
+    transition: 1s;
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 5px 10px;
+}
+
+footer section .redes a img:hover {
+    transform: scale(1.2);
+}
+
+footer section .contenido p {
+    font-weight: 500;
+    font-size: 20px;
+    color: burlywood;
+    padding: 5px 0 0 10px;
+}
+
+footer section .contenido a img {
+    transition: 1s;
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 5px 10px;
+}
+
+footer section .contenido a img:hover {
+    transform: scale(1.2);
+}
