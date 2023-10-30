@@ -206,22 +206,3 @@ controlcard.addEventListener("click", (evt) => {
     }
     cambiodetarjeta(localStorage.getItem("estado"));
 })
-
-const lista = document.querySelector(".btn3");
-lista.addEventListener("click", (evt) => {
-    evt.preventDefault();
-    const posicion1 = JSON.parse(localStorage.getItem("jugador1"));
-    const posicion2 = JSON.parse(localStorage.getItem("jugador2"));
-    const posicion3 = JSON.parse(localStorage.getItem("jugador3"));
-    const listafinal = document.querySelector(".agregadojs");
-    const plista = document.createElement("p")
-    plista.textContent = posicion1.posicion + " - " + posicion1.nombre;
-    const plista1 = document.createElement("p")
-    plista1.textContent = posicion2.posicion + " - " + posicion2.nombre;
-    const plista2 = document.createElement("p")
-    plista2.textContent = posicion3.posicion + " - " + posicion3.nombre;
-    listafinal.append(plista);
-    listafinal.append(plista1);
-    listafinal.append(plista2);
-
-})

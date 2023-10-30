@@ -28,44 +28,45 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/venta.html">Comprar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/galeria.html">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <h1>Todo fut</h1>
-        <form action="">
-            <div>
-                <p>Ingrese el nombre de su jugador:</p>
-                <input  type="text" name="" id="nombreJ" value="Ejemplo">
-            </div>
-            <div>
-                <p>Ingrese sus goles anotados:</p>
-                <input  type="number" name="" id="golesJ" value="100">
-            </div>
-            <div>
-                <p>Ingrese sus asistencias brindadas:</p>
-                <input  type="number" name="" id="asistJ" value="40">
-            </div>
-            <div>
-                <p>Ingrese sus partidos jugados:</p>
-                <input  type="number" name="" id="partidosJ" value="400">
-            </div>
-            <button class="jugadoringresado">Confirmar</button>
-        </form>
+        <div class = "presentacion">
+            <h1>Todo fut</h1>
+            <h2>
+                Te damos la bienvenida a nuestra página
+            </h2>
+            <p>
+                Aquí podrás ver datos de ciertos futbolistas y si gustas agregar los tuyos con su informacion respectiva para luego compararlos con los mejores del mundo.
+            </p>
+            <p>
+                Completa lo siguiente para agregar a tu jugador favorito o a un jugador imaginario!
+            </p>
+            <form action="">
+                <div>
+                    <p>Ingrese el nombre de su jugador:</p>
+                    <input  type="text" name="" id="nombreJ" value="Ejemplo">
+                </div>
+                <div>
+                    <p>Ingrese sus goles anotados:</p>
+                    <input  type="number" name="" id="golesJ" value="100">
+                </div>
+                <div>
+                    <p>Ingrese sus asistencias brindadas:</p>
+                    <input  type="number" name="" id="asistJ" value="40">
+                </div>
+                <div>
+                    <p>Ingrese sus partidos jugados:</p>
+                    <input  type="number" name="" id="partidosJ" value="400">
+                </div>
+                <button class="jugadoringresado">Confirmar</button>
+            </form>
+        </div>
+        
+        
         <section>
             <div class="card" style="width: 18rem;">
                 <h2>Estadisticas de jugadores</h2>
@@ -79,11 +80,10 @@
                     <p class="card-club">Club Actual: Al-Nassr</p>
                     <a href="#" class="btn btn-primary">Siguiente Jugador</a>
                     <a href="#" class="btn btn-primary btn2">Ver jugadores manualmente</a>
-                    <a href="#" class="btn btn-primary btn3">Ver posición de jugadores precargados</a>
                 </div>
             </div>
             <div class = "comparacion">
-                <h2>Resultado de la comparación</h2>
+                <h2>Compare jugadores</h2>
                 <form action="">
                     <div>
                         <p>Ingrese el nombre del primer jugador:</p>
@@ -95,6 +95,7 @@
                     </div>
                     <button class="jugadoresingresados">Confirmar</button>
                 </form>
+                <h3>Resultado de la comparación</h3>
                 <p class="prom-goles">Aqui se mostrara el resultado de su comparación</p>
                 <p class="prom-asist"></p>
                 <p class="prom-ocasiones"></p>

@@ -22,6 +22,16 @@
     width: 250px; 
     height: 350px;
 }
+
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-image: url(https://t3.ftcdn.net/jpg/06/07/07/80/360_F_607078002_yMGIjR7oCK8fvvR8qD8hZ5EsXK7V8M7I.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 form div {
     display: flex;
 }

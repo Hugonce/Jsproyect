@@ -16,7 +16,7 @@ function comparatodo(jug1, jug2){
     }
 
     if(jug1.promasistencia == jug2.promasistencia){
-        const p03 = document.querySelector(".prom-asistencias")
+        const p03 = document.querySelector(".prom-asist")
         p03.textContent = "Ambos jugadores poseen el mismo promedio de asistencias con un valor de " + jug1.promasistencia;
     }else if (jug1.promasistencia < jug2.promasistencia) {
         const p3 = document.querySelector(".prom-asist")
