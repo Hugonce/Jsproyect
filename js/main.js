@@ -67,67 +67,67 @@ function promedio(variable, partidos) {
     return promedioFinal;
 }
 function cambioDeTarjeta(automanu){
-    let jugadornumero = Number(localStorage.getItem("estadotarjeta"));
+    let jugadorNumero = Number(localStorage.getItem("estadotarjeta"));
     if(automanu== "Manual"){
-        const pasatarjeta = document.querySelector(".btn-primary");
-        pasatarjeta.addEventListener("click", (evt) => {
+        const pasarTarjeta = document.querySelector(".btn-primary");
+        pasarTarjeta.addEventListener("click", (evt) => {
             evt.preventDefault();
-            if (jugadornumero + 1 >= jugadores.length) {
-                jugadornumero = 0;
-                localStorage.setItem("estadotarjeta", jugadornumero)
+            if (jugadorNumero + 1 >= jugadores.length) {
+                jugadorNumero = 0;
+                localStorage.setItem("estadotarjeta", jugadorNumero)
             } else {
-                jugadornumero += 1;
-                localStorage.setItem("estadotarjeta", jugadornumero)
+                jugadorNumero += 1;
+                localStorage.setItem("estadotarjeta", jugadorNumero)
             }
             const prueba3 = document.querySelector(".card-jugador")
-            prueba3.textContent = (jugadores[jugadornumero].nombre);
+            prueba3.textContent = (jugadores[jugadorNumero].nombre);
             const prueba4 = document.querySelector(".card-gol")
-            prueba4.textContent = ("Goles: " + jugadores[jugadornumero].goles);
+            prueba4.textContent = ("Goles: " + jugadores[jugadorNumero].goles);
             const prueba5 = document.querySelector(".card-asist")
-            prueba5.textContent = ("Asistencias: " + jugadores[jugadornumero].asistencias);
+            prueba5.textContent = ("Asistencias: " + jugadores[jugadorNumero].asistencias);
             const prueba6 = document.querySelector(".card-jugado")
-            prueba6.textContent = ("Partidos Jugados: " + jugadores[jugadornumero].partidos);
+            prueba6.textContent = ("Partidos Jugados: " + jugadores[jugadorNumero].partidos);
             const prueba7 = document.querySelector(".card-nacion")
-            prueba7.textContent = ("Seleccion: " + jugadores[jugadornumero].pais);
+            prueba7.textContent = ("Seleccion: " + jugadores[jugadorNumero].pais);
             const prueba8 = document.querySelector(".card-club")
-            prueba8.textContent = ("Club Actual: " + jugadores[jugadornumero].club);
+            prueba8.textContent = ("Club Actual: " + jugadores[jugadorNumero].club);
             const prueba9 = document.querySelector(".img-tarj")
-            prueba9.setAttribute("src", jugadores[jugadornumero].img)
+            prueba9.setAttribute("src", jugadores[jugadorNumero].img)
         })
     }
     
     if(automanu== "Auto"){
         
         let tiempo = setInterval(()=>{
-            if (jugadornumero + 1 >= jugadores.length) {
-                jugadornumero = 0;
-                localStorage.setItem("estadotarjeta", jugadornumero)
+            if (jugadorNumero + 1 >= jugadores.length) {
+                jugadorNumero = 0;
+                localStorage.setItem("estadotarjeta", jugadorNumero)
             } else {
-                jugadornumero += 1;
-                localStorage.setItem("estadotarjeta", jugadornumero)
+                jugadorNumero += 1;
+                localStorage.setItem("estadotarjeta", jugadorNumero)
             }
             const prueba3 = document.querySelector(".card-jugador")
-            prueba3.textContent = (jugadores[jugadornumero].nombre);
+            prueba3.textContent = (jugadores[jugadorNumero].nombre);
             const prueba4 = document.querySelector(".card-gol")
-            prueba4.textContent = ("Goles: " + jugadores[jugadornumero].goles);
+            prueba4.textContent = ("Goles: " + jugadores[jugadorNumero].goles);
             const prueba5 = document.querySelector(".card-asist")
-            prueba5.textContent = ("Asistencias: " + jugadores[jugadornumero].asistencias);
+            prueba5.textContent = ("Asistencias: " + jugadores[jugadorNumero].asistencias);
             const prueba6 = document.querySelector(".card-jugado")
-            prueba6.textContent = ("Partidos Jugados: " + jugadores[jugadornumero].partidos);
+            prueba6.textContent = ("Partidos Jugados: " + jugadores[jugadorNumero].partidos);
             const prueba7 = document.querySelector(".card-nacion")
-            prueba7.textContent = ("Seleccion: " + jugadores[jugadornumero].pais);
+            prueba7.textContent = ("Seleccion: " + jugadores[jugadorNumero].pais);
             const prueba8 = document.querySelector(".card-club")
-            prueba8.textContent = ("Club Actual: " + jugadores[jugadornumero].club);
+            prueba8.textContent = ("Club Actual: " + jugadores[jugadorNumero].club);
             const prueba9 = document.querySelector(".img-tarj")
-            prueba9.setAttribute("src", jugadores[jugadornumero].img)
+            prueba9.setAttribute("src", jugadores[jugadorNumero].img)
             if(localStorage.getItem("estado") == "Manual")clearInterval(tiempo);
         }, 5000)
     }
 }
 
 
-const pasajugador = document.querySelector(".jugadoringresado");
-pasajugador.addEventListener("click", (evt) => {
+const pasaJugador = document.querySelector(".jugadoringresado");
+pasaJugador.addEventListener("click", (evt) => {
     Swal.fire({
         title: '¿Estás seguro de querer ingresar al jugador?',
         showDenyButton: true,
@@ -196,17 +196,17 @@ comparacion2.addEventListener("click", (evt) => {
 
 })
 
-const controlcard = document.querySelector(".btn2");
-controlcard.addEventListener("click", (evt) => {
+const controlCard = document.querySelector(".btn2");
+controlCard.addEventListener("click", (evt) => {
     evt.preventDefault();
     let estado = localStorage.getItem("estado")
     if(estado == "Auto"){
         localStorage.setItem("estado", "Manual")
-        controlcard.textContent = "Ver jugadores automaticamente"
+        controlCard.textContent = "Ver jugadores automaticamente"
     }
     if(estado == "Manual"){
         localStorage.setItem("estado", "Auto")
-        controlcard.textContent = "Ver jugadores manualmente"
+        controlCard.textContent = "Ver jugadores manualmente"
     }
     cambioDeTarjeta(localStorage.getItem("estado"));
 })
