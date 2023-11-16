@@ -1,4 +1,3 @@
-
 const jugador1 = {
     nombre: "Lionel Messi",
     goles: 819,
@@ -48,12 +47,16 @@ localStorage.setItem("estado", "Auto");
 cambiodetarjeta(localStorage.getItem("estado"));
 localStorage.setItem("estadotarjeta", 1);
 const jugadores = [jugador1, jugador2, jugador3];
+let cantidadjugadoreslista = 3;
+if(localStorage.getItem("ingreso")== "si"){
+    for (i = 4; i <= (Number(localStorage.getItem("cantidadjugadores"))); i += 1) {
 
-for (i = 4; i <= (Number(localStorage.getItem("cantidadjugadores"))); i += 1) {
+        const jugadorx = JSON.parse(localStorage.getItem("jugador" + i));
+        jugadores.push(jugadorx)
+    }
 
-    const jugadorx = JSON.parse(localStorage.getItem("jugador" + i));
-    jugadores.push(jugadorx)
 }
+
 
 const jugador4 = {}
 
@@ -69,7 +72,7 @@ function cambiodetarjeta(automanu){
         const pasatarjeta = document.querySelector(".btn-primary");
         pasatarjeta.addEventListener("click", (evt) => {
             evt.preventDefault();
-            if (jugadornumero + 1 == jugadores.length) {
+            if (jugadornumero + 1 >= jugadores.length) {
                 jugadornumero = 0;
                 localStorage.setItem("estadotarjeta", jugadornumero)
             } else {
@@ -96,7 +99,7 @@ function cambiodetarjeta(automanu){
     if(automanu== "Auto"){
         
         let tiempo = setInterval(()=>{
-            if (jugadornumero + 1 == jugadores.length) {
+            if (jugadornumero + 1 >= jugadores.length) {
                 jugadornumero = 0;
                 localStorage.setItem("estadotarjeta", jugadornumero)
             } else {
@@ -123,7 +126,6 @@ function cambiodetarjeta(automanu){
 }
 
 
-
 const pasajugador = document.querySelector(".jugadoringresado");
 pasajugador.addEventListener("click", (evt) => {
     Swal.fire({
@@ -147,7 +149,9 @@ pasajugador.addEventListener("click", (evt) => {
             jugador4.pais = "Argentina"
             jugador4.club = "Velez Sarsfield"
             jugador4.clave = jugador4.nombre,
-
+            localStorage.setItem("ingreso", "si");
+            cantidadjugadoreslista +=1;
+            localStorage.setItem("cantidadjugadores", cantidadjugadoreslista);
             localStorage.setItem("jugador" + (jugadores.length + 1), JSON.stringify(jugador4));
             const jugadorx = JSON.parse(localStorage.getItem("jugador" + (jugadores.length + 1)));
             localStorage.setItem("cantidadjugadores", jugadores.length + 1)
