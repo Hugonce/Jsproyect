@@ -56,6 +56,30 @@ section {
     flex-wrap: wrap;
 }
 
+.mundiales{
+    width: 100%;
+    flex-direction: column;
+}
+.mundiales h2{
+    text-align: center;
+}
+.mundiales div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.mundiales div h3{
+    width: 100px;
+}
+.mundiales div p{
+    width: 200px;
+}
+.mundiales div img{
+    height: 100px;
+    width: 300px;
+}
+
 footer {
     background-image: linear-gradient(to right, #3A4741, #8DA0A4);
 }

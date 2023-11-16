@@ -210,3 +210,38 @@ controlcard.addEventListener("click", (evt) => {
     }
     cambiodetarjeta(localStorage.getItem("estado"));
 })
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+
+
+    fetch('data/campeones.json')
+    .then((res)=>{
+        return res.json();
+    })
+    .then((paises)=>{
+        mostrarpaises(paises);
+    })
+    .catch((err)=>{
+
+
+    })
+})
+
+function mostrarpaises(paises){
+    const campeones = document.querySelector(".mundiales");
+    let html = "";
+    paises.forEach((pais)=> {
+        html += `
+        <div class="pais">
+            <h3>${pais.pais}</h3>
+            <img class= "img-band" src=${pais.bandera} " alt="...">
+            <h4>Mundiales ganados: ${pais.cantidad}</h4>
+            <p>En los años: ${pais.años}</p>
+            </div>
+            
+        </div>
+        `
+    });
+    campeones.innerHTML = html;
+}

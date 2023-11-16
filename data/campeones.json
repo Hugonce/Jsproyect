@@ -1,0 +1,55 @@
+[
+    {
+        "pais": "Brasil",
+        "cantidad": 5,
+        "años": "1958,1962,1970,1994,2002",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Brasil.svg"
+    },
+    {
+        "pais": "Italia",
+        "cantidad": 4,
+        "años": "1934,1938,1982,2006",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Italia.svg"
+    },
+    {
+        "pais": "Alemania",
+        "cantidad": 4,
+        "años": "1954,1974,1990,2014",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Alemania.svg"
+    },
+    {
+        "pais": "Argentina",
+        "cantidad": 3,
+        "años": "1978,1986,2022",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Argentina.svg"
+    },
+    {
+        "pais": "Uruguay",
+        "cantidad": 2,
+        "años": "1930,1950",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Uruguay.svg"
+    },
+    {
+        "pais": "Francia",
+        "cantidad": 2,
+        "años": "1998,2018",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Francia.svg"
+    },
+    {
+        "pais": "España",
+        "cantidad": 1,
+        "años": "2010",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Espan%CC%83a.svg"
+    },
+    {
+        "pais": "Inglaterra",
+        "cantidad": 1,
+        "años": "1966",
+        "bandera": "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Reino-Unido.svg"
+    }
+
+
+
+
+
+]
