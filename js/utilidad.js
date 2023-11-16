@@ -1,6 +1,6 @@
 
 
-function comparatodo(jug1, jug2){
+function comparaTodo(jug1, jug2){
     const resultados = document.querySelector(".comparacion");
     if(jug1.promgoles == jug2.promgoles){
         const p0 = document.querySelector(".prom-goles")

@@ -44,7 +44,7 @@ localStorage.setItem("jugador1", JSON.stringify(jugador1));
 localStorage.setItem("jugador2", JSON.stringify(jugador2));
 localStorage.setItem("jugador3", JSON.stringify(jugador3));
 localStorage.setItem("estado", "Auto");
-cambiodetarjeta(localStorage.getItem("estado"));
+cambioDeTarjeta(localStorage.getItem("estado"));
 localStorage.setItem("estadotarjeta", 1);
 const jugadores = [jugador1, jugador2, jugador3];
 let cantidadjugadoreslista = 3;
@@ -61,12 +61,12 @@ if(localStorage.getItem("ingreso")== "si"){
 const jugador4 = {}
 
 function promedio(variable, partidos) {
-    let promediofinal = 0;
-    promediofinal = Number(variable) / Number(partidos);
+    let promedioFinal = 0;
+    promedioFinal = Number(variable) / Number(partidos);
 
-    return promediofinal;
+    return promedioFinal;
 }
-function cambiodetarjeta(automanu){
+function cambioDeTarjeta(automanu){
     let jugadornumero = Number(localStorage.getItem("estadotarjeta"));
     if(automanu== "Manual"){
         const pasatarjeta = document.querySelector(".btn-primary");
@@ -185,7 +185,7 @@ comparacion2.addEventListener("click", (evt) => {
         }
     }
     if (aux1 && aux2) {
-        comparatodo(jugnumero1, jugnumero2);
+        comparaTodo(jugnumero1, jugnumero2);
     } else {
         Swal.fire({
             icon: 'error',
@@ -208,7 +208,7 @@ controlcard.addEventListener("click", (evt) => {
         localStorage.setItem("estado", "Auto")
         controlcard.textContent = "Ver jugadores manualmente"
     }
-    cambiodetarjeta(localStorage.getItem("estado"));
+    cambioDeTarjeta(localStorage.getItem("estado"));
 })
 
 
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         return res.json();
     })
     .then((paises)=>{
-        mostrarpaises(paises);
+        mostrarPaises(paises);
     })
     .catch((err)=>{
 
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 })
 
-function mostrarpaises(paises){
+function mostrarPaises(paises){
     const campeones = document.querySelector(".mundiales");
     let html = "";
     paises.forEach((pais)=> {
